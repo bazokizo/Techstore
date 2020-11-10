@@ -1,0 +1,85 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+  {% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% endblock %}
+
+{% block content %}
+  
+    
+
+   
+
+    <div class="site-blocks-cover" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto order-md-2 align-self-start">
+            <div class="site-block-cover-content animate__animated ">
+            <h2 class="sub-title animate__animated animate__fadeInRightBig animate__slow">Welcome to our shop. get the latest gadgets here.</h2>
+            <h1 class="animate__animated animate__fadeInRightBig animate__slow">Arrivals Sales</h1>
+            <p><a href="{% url 'shop:product_list' %}" class="btn btn-black rounded-0  animate__hinge animate__slower animate__slower" >Shop Now</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 align-self-end animate__animated animate__backInLeft animate__slow">
+            <img src="{% static 'images/store.jpg'%}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="title-section mb-5">
+          <h2 class="text-uppercase" data-aos="fade-right" ><span class="d-block">Discover</span> The Collections</h2>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-lg-8">
+            <div class="product-item sm-height full-height bg-gray animate__animated animate__zoomIn animate__slower animate__repeat-3">
+               
+              <a href="{% url 'shop:phones' %}" class="product-category ">phones </a>
+              
+              <img src="{% static 'images/phone.jpg' %}" alt="Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="product-item sm-height bg-gray mb-4 animate__animated animate__zoomIn animate__slower animate__repeat-3">
+              <a href="{% url 'shop:laptops' %}" class="product-category">Laptops </a>
+              <img src="{% static 'images/laptop.jpg' %}" alt="Image" class="img-fluid">
+            </div>
+
+            <div class="product-item sm-height bg-gray animate__animated animate__zoomIn animate__slower animate__repeat-3">
+              <a href="{% url 'shop:tvs' %}" class="product-category">Tvs </a>
+              <img src="{% static 'images/tv.jpg' %}" alt="Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+   
+
+    <div class="site-blocks-cover inner-page py-5" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto order-md-2 align-self-start">
+            <div class="site-block-cover-content" >
+            <h2 class="sub-title" data-aos="fade-left">We also offer repair services for all devices.</h2>
+            <h1 data-aos="fade-left">Click Below</h1>
+            <p><a href="{% url 'shop:repairs' %}" class="btn btn-black rounded-0" data-aos="fade-left"> repair </a></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 align-self-end" data-aos="fade-right">
+            <img src="{% static 'images/repair.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+
+ {% endblock %}
