@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '0*s*a5+&y(n19d#idftg*vzisv%233
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-ALLOWED_HOSTS = ['techstore254.herokuapp.com']
+ALLOWED_HOSTS = ['techstore254.herokuapp.com',
+                'techstore-git-chairopian-dev.apps.sandbox.x8i5.p1.openshiftapps.com']
 
 
 # Application definition
